@@ -46,33 +46,109 @@ const conditionMap = {
 
 const scenarios = {
 
+// ==============================
+// 四種實驗情境
+// 每個 Condition 包含 3 張連續圖片
+// ==============================
+
+const scenarios = {
+
   1: `
     <div class="scenario-box">
-      <h2>情境 1</h2>
-      <p>這裡放 Condition 1 的正式情境材料。</p>
+
+      <img
+        src="images/c1_01.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 1"
+      >
+
+      <img
+        src="images/c1_02.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 2"
+      >
+
+      <img
+        src="images/c1_03.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 3"
+      >
+
     </div>
   `,
 
   2: `
     <div class="scenario-box">
-      <h2>情境 2</h2>
-      <p>這裡放 Condition 2 的正式情境材料。</p>
+
+      <img
+        src="images/c2_01.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 1"
+      >
+
+      <img
+        src="images/c2_02.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 2"
+      >
+
+      <img
+        src="images/c2_03.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 3"
+      >
+
     </div>
   `,
 
   3: `
     <div class="scenario-box">
-      <h2>情境 3</h2>
-      <p>這裡放 Condition 3 的正式情境材料。</p>
+
+      <img
+        src="images/c3_01.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 1"
+      >
+
+      <img
+        src="images/c3_02.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 2"
+      >
+
+      <img
+        src="images/c3_03.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 3"
+      >
+
     </div>
   `,
 
   4: `
     <div class="scenario-box">
-      <h2>情境 4</h2>
-      <p>這裡放 Condition 4 的正式情境材料。</p>
+
+      <img
+        src="images/c4_01.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 1"
+      >
+
+      <img
+        src="images/c4_02.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 2"
+      >
+
+      <img
+        src="images/c4_03.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 3"
+      >
+
     </div>
   `
+
 };
 
 
