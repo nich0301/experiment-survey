@@ -11,114 +11,168 @@
 
 <div class="container">
 
-  <!-- ========================= -->
-  <!-- Page 1：研究說明 -->
-  <!-- ========================= -->
+<!-- ========================= -->
+<!-- Page 1：研究說明 -->
+<!-- ========================= -->
 
-  <section id="page-1" class="page">
+<section id="page-1" class="page">
 
-    <h1>研究參與說明</h1>
+  <h1>研究參與說明</h1>
+
+  <p>
+    親愛的受訪者您好：
+  </p>
+
+  <p>
+    感謝您撥冗參與本研究。本研究旨在探討
+    <strong>AI 旅遊助理化身設計對使用者旅遊預訂意圖之影響</strong>，
+    希望透過您的寶貴意見，了解 AI 旅遊助理的設計與互動方式，
+    如何影響使用者在旅遊規劃過程中的心理感受、判斷與旅遊決策。
+  </p>
+
+  <p>
+    本問卷將呈現旅遊網站中使用 AI 旅遊助理規劃旅程的模擬情境。
+    填答過程中，請您仔細閱讀後續呈現的情境說明與網站畫面，
+    並想像自己正在實際使用該旅遊網站中的 AI 旅遊助理規劃旅程，
+    再依據您的實際感受與判斷回答後續問題。
+    問卷中的答案沒有對錯之分，請依照您當下最真實的感受作答。
+  </p>
+
+  <p>
+    本問卷採匿名方式進行，所有資料僅供學術研究與統計分析使用，
+    不作任何商業用途，亦不會揭露可識別您身分的個人資料。
+    您可以自由決定是否參與本研究，亦可於填答過程中隨時停止作答。
+  </p>
+
+  <p>
+    您的每一份回覆都將對本研究具有重要價值，
+    誠摯感謝您的支持與協助！
+  </p>
+
+  <p>
+    敬祝<br>
+    平安順心　身體健康
+  </p>
+
+  <div class="research-info">
+    <p>
+      朝陽科技大學休閒事業管理系<br>
+      指導教授：許吉越教授<br>
+      學生：陳宜芃、林安芸 敬上
+    </p>
+  </div>
+
+  <hr>
+
+  <p>
+    若您已閱讀並了解上述研究說明，且同意參與本研究，
+    請點選下方按鈕開始填答。
+  </p>
+
+  <button id="consent-btn">
+    我已閱讀並同意參與研究
+  </button>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- Page 2：情境＋實驗材料＋檢核 -->
+<!-- ========================= -->
+
+<section id="page-2" class="page hidden">
+
+  <h1>情境說明</h1>
+
+  <div class="scenario-intro">
+
+    <h2>請您想像以下情境：</h2>
 
     <p>
-      您好，感謝您參與本研究。
+      您近期計畫與一位同行者安排一趟
+      <strong>澎湖三天兩夜的小旅行</strong>。
+      由於您對澎湖的景點安排、交通方式、天氣變化與預算控制仍不太熟悉，
+      因此您決定使用某旅遊網站中的
+      <strong>AI 旅遊助理</strong>，
+      協助您整理旅遊資訊並規劃行程。
     </p>
 
     <p>
-      本研究旨在了解受試者在特定旅遊情境下，
-      對相關資訊與服務的看法與反應。
+      接下來，您將看到幾張連續的旅遊網站畫面。
+      請您依照畫面順序仔細閱讀內容，
+      並想像自己正在使用該網站的 AI 旅遊助理規劃這趟旅程。
     </p>
 
     <p>
-      本問卷僅供學術研究使用，您的回答將以匿名方式進行分析。
-      本問卷沒有標準答案，請依照您的真實感受作答。
+      閱讀完畢後，請依據您對此 AI 旅遊助理的
+      <strong>實際感受與判斷</strong>，
+      回答下方及後續問題。
     </p>
 
-    <p>
-      您可以自由決定是否參與，也可以在填答過程中隨時停止。
-    </p>
-
-    <button id="consent-btn">
-      我同意參與研究
-    </button>
-
-  </section>
+  </div>
 
 
-  <!-- ========================= -->
-  <!-- Page 2：情境＋實驗材料＋檢核 -->
-  <!-- ========================= -->
-
-  <section id="page-2" class="page hidden">
-
-    <h1>情境說明</h1>
-
-    <div class="scenario-intro">
-      <p>
-        請仔細閱讀以下情境，並想像自己正在使用下列旅遊服務。
-      </p>
-    </div>
-
-    <div id="condition-content"></div>
+  <!-- 四組實驗材料會被 JavaScript 放進這裡 -->
+  <div id="condition-content"></div>
 
 
-    <hr>
-
-    <h2>請回答以下問題</h2>
+  <hr>
 
 
-    <!-- Attention Check -->
+  <!-- 注意力檢查 -->
 
-    <div class="question">
-      <p>AC1. 注意力檢查題 1</p>
+  <h2>請依據上述內容回答以下問題</h2>
 
-      <select id="AC1" required>
-        <option value="">請選擇</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-      </select>
-    </div>
+  <div class="question">
+    <p>AC1. 注意力檢查題 1</p>
 
+    <select id="AC1">
+      <option value="">請選擇</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+  </div>
 
-    <div class="question">
-      <p>AC2. 注意力檢查題 2</p>
+  <div class="question">
+    <p>AC2. 注意力檢查題 2</p>
 
-      <select id="AC2" required>
-        <option value="">請選擇</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-      </select>
-    </div>
-
-
-    <!-- Text Emotion Manipulation Check -->
-
-    <h3>文字內容感受</h3>
-
-    <div id="TXT_MC_questions"></div>
+    <select id="AC2">
+      <option value="">請選擇</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+  </div>
 
 
-    <!-- Avatar Realism Manipulation Check -->
+  <!-- 文字情緒操弄檢查 -->
 
-    <h3>化身樣貌感受</h3>
+  <h3>文字內容感受</h3>
 
-    <div id="AVR_MC_questions"></div>
+  <div id="TXT_MC_questions"></div>
 
 
-    <button id="page2-next">
-      下一頁
-    </button>
+  <!-- 化身真實性操弄檢查 -->
 
-  </section>
+  <h3>AI 旅遊助理外觀感受</h3>
+
+  <div id="AVR_MC_questions"></div>
+
+
+  <button id="page2-next">
+    下一頁
+  </button>
+
+</section>
 
 
   <!-- ========================= -->
