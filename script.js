@@ -283,7 +283,18 @@ function renderDemographics() {
 // Page switching
 // ==========================================
 
+// ==========================================
+// Page switching + 問卷進度
+// ==========================================
+
 function showPage(pageNumber) {
+
+  const totalPages = 4;
+
+
+  // ----------------------------------------
+  // 隱藏所有頁面
+  // ----------------------------------------
 
   document
     .querySelectorAll(".page")
@@ -292,8 +303,14 @@ function showPage(pageNumber) {
     });
 
 
+  // ----------------------------------------
+  // 顯示指定頁面
+  // ----------------------------------------
+
   const targetPage =
-    document.getElementById(`page-${pageNumber}`);
+    document.getElementById(
+      `page-${pageNumber}`
+    );
 
 
   if (!targetPage) {
@@ -306,8 +323,99 @@ function showPage(pageNumber) {
   }
 
 
-  targetPage.classList.remove("hidden");
+  targetPage.classList.remove(
+    "hidden"
+  );
 
+
+  // ----------------------------------------
+  // 計算進度
+  // ----------------------------------------
+
+  const progress =
+    Math.round(
+      (pageNumber / totalPages)
+      * 100
+    );
+
+
+  // ----------------------------------------
+  // 更新頁碼
+  // ----------------------------------------
+
+  const pageIndicator =
+    document.getElementById(
+      "page-indicator"
+    );
+
+
+  if (pageIndicator) {
+
+    pageIndicator.textContent =
+      `第 ${pageNumber} / ${totalPages} 頁`;
+
+  }
+
+
+  // ----------------------------------------
+  // 更新進度條
+  // ----------------------------------------
+
+  const progressBar =
+    document.getElementById(
+      "progress-bar"
+    );
+
+
+  if (progressBar) {
+
+    progressBar.style.width =
+      `${progress}%`;
+
+  }
+
+
+  // ----------------------------------------
+  // 更新百分比
+  // ----------------------------------------
+
+  const progressPercent =
+    document.getElementById(
+      "progress-percent"
+    );
+
+
+  if (progressPercent) {
+
+    progressPercent.textContent =
+      `${progress}%`;
+
+  }
+
+
+  // ----------------------------------------
+  // Accessibility
+  // ----------------------------------------
+
+  const progressTrack =
+    document.querySelector(
+      ".progress-track"
+    );
+
+
+  if (progressTrack) {
+
+    progressTrack.setAttribute(
+      "aria-valuenow",
+      progress
+    );
+
+  }
+
+
+  // ----------------------------------------
+  // 回到頁面頂端
+  // ----------------------------------------
 
   window.scrollTo({
     top: 0,
