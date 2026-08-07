@@ -1,59 +1,459 @@
+/* =========================================
+   全域設定
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, "Microsoft JhengHei", sans-serif;
-  background-color: #f5f5f5;
   margin: 0;
   padding: 40px 20px;
+
+  font-family:
+    "Noto Sans TC",
+    "Microsoft JhengHei",
+    Arial,
+    sans-serif;
+
+  background: #f4f6f8;
+  color: #2d3748;
+
   line-height: 1.8;
 }
 
+
+/* =========================================
+   主容器
+   ========================================= */
+
 .container {
-  max-width: 760px;
-  margin: auto;
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
+  width: 100%;
+  max-width: 860px;
+
+  margin: 0 auto;
+  padding: 48px 56px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   頁面
+   ========================================= */
+
+.page {
+  animation: fadeIn 0.35s ease;
 }
 
 .hidden {
   display: none;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   標題
+   ========================================= */
+
 h1 {
+  margin-top: 0;
+  margin-bottom: 28px;
+
+  font-size: 30px;
+  font-weight: 700;
+
   text-align: center;
-  margin-bottom: 30px;
+
+  color: #1f2937;
 }
 
-button {
-  display: block;
-  margin: 30px auto 0;
-  padding: 12px 28px;
+h2 {
+  margin-top: 36px;
+  margin-bottom: 18px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #2d3748;
+}
+
+h3 {
+  margin-top: 28px;
+  margin-bottom: 14px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #4a5568;
+}
+
+
+/* =========================================
+   文字
+   ========================================= */
+
+p {
+  margin: 0 0 18px 0;
+
   font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
 }
 
-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
+strong {
+  color: #1f2937;
 }
-/* =========================
-   實驗刺激圖片
-   ========================= */
+
+
+/* =========================================
+   研究資訊
+   ========================================= */
+
+.research-info {
+  margin-top: 28px;
+
+  padding: 20px 24px;
+
+  background: #f8fafc;
+
+  border-left: 4px solid #4f6f8f;
+
+  border-radius: 8px;
+}
+
+.research-info p {
+  margin: 0;
+}
+
+
+/* =========================================
+   分隔線
+   ========================================= */
+
+hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+
+  margin: 36px 0;
+}
+
+
+/* =========================================
+   情境說明
+   ========================================= */
+
+.scenario-intro {
+  margin-bottom: 32px;
+
+  padding: 28px 30px;
+
+  background: #f7fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 14px;
+}
+
+.scenario-intro h2 {
+  margin-top: 0;
+}
+
+
+/* =========================================
+   實驗材料
+   ========================================= */
 
 .scenario-box {
   width: 100%;
-  margin: 30px auto;
+
+  margin: 30px auto 40px auto;
 }
 
 .stimulus-image {
   display: block;
 
   width: 100%;
-  max-width: 760px;
+  max-width: 780px;
   height: auto;
 
-  margin: 0 auto 24px auto;
+  margin: 0 auto 26px auto;
+
+  border-radius: 12px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   題目區塊
+   ========================================= */
+
+.question {
+  margin-bottom: 26px;
+
+  padding: 22px 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.question:hover {
+  border-color: #b8c5d1;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.question p {
+  margin-bottom: 16px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   Likert Scale
+   ========================================= */
+
+.likert-scale {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+.likert-scale label {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+
+  min-height: 58px;
+
+  padding: 8px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.likert-scale label:hover {
+  background: #eef3f8;
+
+  border-color: #9fb0c1;
+}
+
+.likert-scale input[type="radio"] {
+  margin-bottom: 6px;
+
+  transform: scale(1.15);
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   Select / Input
+   ========================================= */
+
+select,
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  font-size: 16px;
+
+  border: 1px solid #cbd5e1;
 
   border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #2d3748;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+select:focus,
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #647f9b;
+
+  box-shadow:
+    0 0 0 3px rgba(100, 127, 155, 0.12);
+}
+
+
+/* =========================================
+   按鈕
+   ========================================= */
+
+button {
+  display: block;
+
+  min-width: 180px;
+
+  margin: 36px auto 0 auto;
+
+  padding: 14px 28px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  background: #4f6f8f;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: #3f5d78;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================
+   感謝訊息
+   ========================================= */
+
+#thank-you-message {
+  margin-top: 40px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: #f7fafc;
+
+  border: 1px solid #dbe4ec;
+
+  border-radius: 14px;
+}
+
+
+/* =========================================
+   手機版
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 20px 12px;
+  }
+
+  .container {
+    padding: 30px 20px;
+
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .scenario-intro {
+    padding: 22px 20px;
+  }
+
+  .question {
+    padding: 18px 16px;
+  }
+
+  .likert-scale {
+    gap: 6px;
+  }
+
+  .likert-scale label {
+    min-width: 38px;
+
+    padding: 6px 4px;
+
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+  }
+
 }
