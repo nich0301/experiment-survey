@@ -1,64 +1,77 @@
-// 先查看受試者是否已經被分組
-let condition = localStorage.getItem("condition");
+// ==============================
+// 1. 取得或建立受試者 ID
+// ==============================
 
-// 如果還沒有分組，就隨機產生 1～4
-if (!condition) {
-  condition = Math.floor(Math.random() * 4) + 1;
-  localStorage.setItem("condition", condition);
+let participantId = localStorage.getItem("participant_id");
+
+if (!participantId) {
+    participantId = crypto.randomUUID();
+    localStorage.setItem("participant_id", participantId);
 }
 
-// 四種實驗情境
+
+// ==============================
+// 2. 隨機分派實驗組別
+// ==============================
+
+let condition = localStorage.getItem("condition");
+
+if (!condition) {
+    // 隨機產生 1、2、3、4
+    condition = Math.floor(Math.random() * 4) + 1;
+
+    // 儲存在瀏覽器，避免重新整理後換組
+    localStorage.setItem("condition", condition);
+}
+
+
+// ==============================
+// 3. 定義四種實驗情境
+// ==============================
+
 const scenarios = {
-  1: `
-    <h2>情境 A</h2>
-    <p>
-      這裡放第一組受試者會看到的實驗刺激。
-    </p>
-  `,
 
-  2: `
-    <h2>情境 B</h2>
-    <p>
-      這裡放第二組受試者會看到的實驗刺激。
-    </p>
-  `,
+    1: `
+        <h2>情境 A</h2>
+        <p>
+        您目前看到的是第一種實驗情境。
+        </p>
+    `,
 
-  3: `
-    <h2>情境 C</h2>
-    <p>
-      這裡放第三組受試者會看到的實驗刺激。
-    </p>
-  `,
+    2: `
+        <h2>情境 B</h2>
+        <p>
+        您目前看到的是第二種實驗情境。
+        </p>
+    `,
 
-  4: `
-    <h2>情境 D</h2>
-    <p>
-      這裡放第四組受試者會看到的實驗刺激。
-    </p>
-  `
+    3: `
+        <h2>情境 C</h2>
+        <p>
+        您目前看到的是第三種實驗情境。
+        </p>
+    `,
+
+    4: `
+        <h2>情境 D</h2>
+        <p>
+        您目前看到的是第四種實驗情境。
+        </p>
+    `
 };
 
-// 顯示對應情境
+
+// ==============================
+// 4. 顯示受試者被分派到的情境
+// ==============================
+
 document.getElementById("condition-content").innerHTML =
-  scenarios[condition];
+    scenarios[condition];
 
 
-// 送出按鈕
-document.getElementById("submit-btn").addEventListener("click", function () {
+// ==============================
+// 5. 測試用：在 Console 顯示資訊
+// ==============================
 
-  const trust = document.querySelector(
-    'input[name="trust"]:checked'
-  );
-
-  if (!trust) {
-    alert("請先完成題目。");
-    return;
-  }
-
-  console.log({
-    condition: condition,
-    trust: trust.value
-  });
-
-  alert("問卷已完成！");
-});
+console.log("Participant ID:", participantId);
+console.log("Condition:", condition);
