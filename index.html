@@ -11,47 +11,63 @@
 
   <div class="container">
 
-    <h1>研究問卷</h1>
+    <!-- Page 1：研究說明 -->
+    <section id="consent-page" class="page">
 
-    <div id="condition-content"></div>
+      <h1>研究參與說明</h1>
 
-    <hr>
+      <p>
+        您好，感謝您參與本研究。
+      </p>
 
-    <h2>請回答以下問題</h2>
+      <p>
+        本研究旨在了解受試者對特定情境內容的看法與反應。
+        問卷內容僅供學術研究使用，您的回答將以匿名方式進行分析。
+      </p>
 
-    <p>我認為上述情境中的服務值得信任。</p>
+      <p>
+        本問卷沒有標準答案，請依照您的真實感受作答。
+        您可以自由決定是否參與，也可以在填答過程中隨時停止。
+      </p>
 
-    <label>
-      <input type="radio" name="trust" value="1"> 1
-    </label>
+      <p>
+        若您已閱讀上述說明，並同意參與本研究，
+        請點選下方「我同意參與研究」。
+      </p>
 
-    <label>
-      <input type="radio" name="trust" value="2"> 2
-    </label>
+      <button id="consent-btn">
+        我同意參與研究
+      </button>
 
-    <label>
-      <input type="radio" name="trust" value="3"> 3
-    </label>
+    </section>
 
-    <label>
-      <input type="radio" name="trust" value="4"> 4
-    </label>
 
-    <label>
-      <input type="radio" name="trust" value="5"> 5
-    </label>
+    <!-- Page 2：實驗情境 -->
+    <section id="scenario-page" class="page hidden">
 
-    <label>
-      <input type="radio" name="trust" value="6"> 6
-    </label>
+      <div id="loading-message">
+        正在載入研究內容，請稍候...
+      </div>
 
-    <label>
-      <input type="radio" name="trust" value="7"> 7
-    </label>
+      <div id="condition-content"></div>
 
-    <br><br>
+      <button id="scenario-next-btn" class="hidden">
+        下一頁
+      </button>
 
-    <button id="submit-btn">送出問卷</button>
+    </section>
+
+
+    <!-- Page 3：先放測試頁 -->
+    <section id="questionnaire-page" class="page hidden">
+
+      <h1>問卷題目</h1>
+
+      <p>
+        這裡之後會放共同問卷。
+      </p>
+
+    </section>
 
   </div>
 
