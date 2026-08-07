@@ -332,11 +332,15 @@ function showPage(pageNumber) {
   // 計算進度
   // ----------------------------------------
 
-  const progress =
-    Math.round(
-      (pageNumber / totalPages)
-      * 100
-    );
+const progressMap = {
+  1: 0,
+  2: 33,
+  3: 67,
+  4: 100
+};
+
+const progress =
+  progressMap[pageNumber];
 
 
   // ----------------------------------------
