@@ -516,3 +516,58 @@ button:disabled {
 
   color: #94a3b8;
 }
+
+/* =========================================
+   問卷結尾說明
+   ========================================= */
+
+.closing-message {
+  margin-top: 28px;
+
+  padding: 22px 26px;
+
+  text-align: center;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  color: #475569;
+}
+
+.closing-message p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   完成訊息
+   ========================================= */
+
+.completion-card {
+  margin-top: 24px;
+
+  padding: 32px 30px;
+
+  text-align: center;
+
+  background: #f8fafc;
+
+  border: 1px solid #dbe4ec;
+
+  border-radius: 14px;
+}
+
+.completion-card h2 {
+  margin-top: 0;
+
+  color: #3f5d78;
+}
+
+.completion-signature {
+  margin-top: 28px;
+
+  color: #64748b;
+}
