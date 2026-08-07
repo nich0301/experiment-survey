@@ -37,3 +37,23 @@ button:disabled {
   cursor: not-allowed;
   opacity: 0.6;
 }
+/* =========================
+   實驗刺激圖片
+   ========================= */
+
+.scenario-box {
+  width: 100%;
+  margin: 30px auto;
+}
+
+.stimulus-image {
+  display: block;
+
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+
+  margin: 0 auto 24px auto;
+
+  border-radius: 8px;
+}
