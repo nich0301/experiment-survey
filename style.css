@@ -1,13 +1,20 @@
 /* =========================================
-   全域設定
+   全域
    ========================================= */
 
 * {
   box-sizing: border-box;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   margin: 0;
+
   padding: 40px 20px;
 
   font-family:
@@ -16,7 +23,8 @@ body {
     Arial,
     sans-serif;
 
-  background: #f4f6f8;
+  background: #f3f6f9;
+
   color: #2d3748;
 
   line-height: 1.8;
@@ -24,59 +32,71 @@ body {
 
 
 /* =========================================
-   主容器
+   問卷主容器
    ========================================= */
 
 .container {
   width: 100%;
-  max-width: 860px;
+
+  max-width: 900px;
 
   margin: 0 auto;
-  padding: 48px 56px;
+
+  padding: 44px 56px 56px;
 
   background: #ffffff;
 
   border-radius: 18px;
 
   box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.08);
+    0 8px 28px
+    rgba(15, 23, 42, 0.08);
 }
 
 
 /* =========================================
-   頁面
+   Page
    ========================================= */
 
 .page {
-  animation: fadeIn 0.35s ease;
+  animation:
+    fadeIn 0.3s ease;
 }
+
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
+
 @keyframes fadeIn {
+
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform:
+      translateY(6px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform:
+      translateY(0);
   }
+
 }
 
 
 /* =========================================
-   標題
+   Typography
    ========================================= */
 
 h1 {
   margin-top: 0;
-  margin-bottom: 28px;
+
+  margin-bottom: 30px;
 
   font-size: 30px;
+
   font-weight: 700;
 
   text-align: center;
@@ -84,39 +104,135 @@ h1 {
   color: #1f2937;
 }
 
+
 h2 {
-  margin-top: 36px;
+  margin-top: 32px;
+
   margin-bottom: 18px;
 
   font-size: 22px;
+
   font-weight: 700;
 
-  color: #2d3748;
+  color: #293849;
 }
+
 
 h3 {
   margin-top: 28px;
+
   margin-bottom: 14px;
 
   font-size: 18px;
+
   font-weight: 600;
 
-  color: #4a5568;
+  color: #475569;
 }
 
 
-/* =========================================
-   文字
-   ========================================= */
-
 p {
-  margin: 0 0 18px 0;
+  margin-top: 0;
+
+  margin-bottom: 18px;
 
   font-size: 16px;
 }
 
+
 strong {
   color: #1f2937;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   HR
+   ========================================= */
+
+hr {
+  border: none;
+
+  border-top:
+    1px solid #e2e8f0;
+
+  margin: 38px 0;
+}
+
+
+/* =========================================
+   問卷進度
+   ========================================= */
+
+.survey-progress {
+  margin-bottom: 38px;
+
+  padding-bottom: 24px;
+
+  border-bottom:
+    1px solid #e2e8f0;
+}
+
+
+.progress-info {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #64748b;
+}
+
+
+#page-indicator {
+  color: #4f6f8f;
+}
+
+
+.progress-track {
+  width: 100%;
+
+  height: 9px;
+
+  overflow: hidden;
+
+  background: #e8edf2;
+
+  border-radius: 999px;
+}
+
+
+.progress-bar {
+  height: 100%;
+
+  width: 0;
+
+  background: #4f6f8f;
+
+  border-radius: 999px;
+
+  transition:
+    width 0.4s ease;
+}
+
+
+.progress-percent {
+  margin-top: 7px;
+
+  text-align: right;
+
+  font-size: 13px;
+
+  color: #94a3b8;
 }
 
 
@@ -131,25 +247,15 @@ strong {
 
   background: #f8fafc;
 
-  border-left: 4px solid #4f6f8f;
+  border-left:
+    4px solid #4f6f8f;
 
   border-radius: 8px;
 }
 
+
 .research-info p {
   margin: 0;
-}
-
-
-/* =========================================
-   分隔線
-   ========================================= */
-
-hr {
-  border: none;
-  border-top: 1px solid #e2e8f0;
-
-  margin: 36px 0;
 }
 
 
@@ -162,15 +268,65 @@ hr {
 
   padding: 28px 30px;
 
-  background: #f7fafc;
+  background: #f8fafc;
 
-  border: 1px solid #e2e8f0;
+  border:
+    1px solid #e2e8f0;
 
   border-radius: 14px;
 }
 
+
 .scenario-intro h2 {
   margin-top: 0;
+}
+
+
+.section-intro {
+  margin-bottom: 24px;
+}
+
+
+.section-intro h2 {
+  margin-top: 0;
+}
+
+
+/* =========================================
+   Page instruction
+   ========================================= */
+
+.page-instruction,
+.likert-instruction {
+  margin-bottom: 28px;
+
+  padding: 20px 24px;
+
+  background: #f8fafc;
+
+  border:
+    1px solid #e2e8f0;
+
+  border-radius: 10px;
+}
+
+
+.page-instruction p,
+.likert-instruction p {
+  margin-bottom: 7px;
+}
+
+
+.page-instruction p:last-child,
+.likert-instruction p:last-child {
+  margin-bottom: 0;
+}
+
+
+.scale-note {
+  font-size: 14px;
+
+  color: #64748b;
 }
 
 
@@ -181,58 +337,93 @@ hr {
 .scenario-box {
   width: 100%;
 
-  margin: 30px auto 40px auto;
+  margin:
+    30px auto 42px;
 }
+
 
 .stimulus-image {
   display: block;
 
   width: 100%;
-  max-width: 780px;
+
+  max-width: 800px;
+
   height: auto;
 
-  margin: 0 auto 26px auto;
+  margin:
+    0 auto 28px;
+
+  border:
+    1px solid #e5e7eb;
 
   border-radius: 12px;
 
-  border: 1px solid #e5e7eb;
-
   box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.07);
+    0 4px 18px
+    rgba(15, 23, 42, 0.07);
 }
 
 
 /* =========================================
-   題目區塊
+   Question Card
    ========================================= */
 
 .question {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 
   padding: 22px 24px;
 
   background: #ffffff;
 
-  border: 1px solid #e2e8f0;
+  border:
+    1px solid #e2e8f0;
 
   border-radius: 12px;
 
   transition:
     border-color 0.2s ease,
+    background 0.2s ease,
     box-shadow 0.2s ease;
 }
 
+
 .question:hover {
-  border-color: #b8c5d1;
+  border-color: #c1ccd7;
 
   box-shadow:
-    0 3px 10px rgba(0, 0, 0, 0.04);
+    0 3px 10px
+    rgba(15, 23, 42, 0.04);
 }
 
-.question p {
+
+.question-text {
   margin-bottom: 16px;
 
+  font-size: 16px;
+
   font-weight: 500;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   Likert endpoints
+   ========================================= */
+
+.scale-endpoints {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  margin:
+    4px 3px 8px;
+
+  font-size: 13px;
+
+  color: #64748b;
 }
 
 
@@ -243,106 +434,227 @@ hr {
 .likert-scale {
   display: flex;
 
-  justify-content: space-between;
-  align-items: center;
+  justify-content:
+    space-between;
 
-  gap: 10px;
+  align-items: stretch;
 
-  margin-top: 12px;
+  gap: 9px;
+
+  width: 100%;
 }
+
 
 .likert-scale label {
   display: flex;
 
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
   flex: 1;
 
-  min-height: 58px;
+  flex-direction: column;
 
-  padding: 8px;
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 62px;
+
+  padding: 8px 5px;
 
   background: #f8fafc;
 
-  border: 1px solid #e2e8f0;
+  border:
+    1px solid #e2e8f0;
 
   border-radius: 9px;
 
   cursor: pointer;
 
-  transition: all 0.2s ease;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.12s ease;
 }
+
 
 .likert-scale label:hover {
   background: #eef3f8;
 
   border-color: #9fb0c1;
+
+  transform:
+    translateY(-1px);
 }
 
-.likert-scale input[type="radio"] {
-  margin-bottom: 6px;
 
-  transform: scale(1.15);
+.likert-scale label:has(
+  input:checked
+) {
+  background: #eaf1f7;
+
+  border-color: #4f6f8f;
+
+  box-shadow:
+    0 0 0 1px #4f6f8f;
+}
+
+
+.likert-scale input[
+  type="radio"
+] {
+  width: 17px;
+
+  height: 17px;
+
+  margin:
+    0 0 6px;
+
+  accent-color: #4f6f8f;
 
   cursor: pointer;
 }
 
 
+.likert-scale label span {
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+
 /* =========================================
-   Select / Input
+   Choice Questions
    ========================================= */
 
-select,
-input[type="text"],
-input[type="number"] {
-  width: 100%;
+.choice-list {
+  display: grid;
 
-  padding: 12px 14px;
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
 
-  font-size: 16px;
+  gap: 12px;
 
-  border: 1px solid #cbd5e1;
-
-  border-radius: 8px;
-
-  background: #ffffff;
-
-  color: #2d3748;
-
-  outline: none;
-
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  margin-top: 14px;
 }
 
-select:focus,
-input[type="text"]:focus,
-input[type="number"]:focus {
-  border-color: #647f9b;
+
+.choice-option {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  min-height: 52px;
+
+  padding: 13px 16px;
+
+  background: #f8fafc;
+
+  border:
+    1px solid #e2e8f0;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+.choice-option:hover {
+  background: #eef3f8;
+
+  border-color: #9fb0c1;
+}
+
+
+.choice-option:has(
+  input:checked
+) {
+  background: #eaf1f7;
+
+  border-color: #4f6f8f;
 
   box-shadow:
-    0 0 0 3px rgba(100, 127, 155, 0.12);
+    0 0 0 1px #4f6f8f;
+}
+
+
+.choice-option input[
+  type="radio"
+] {
+  flex-shrink: 0;
+
+  width: 18px;
+
+  height: 18px;
+
+  margin: 0;
+
+  accent-color: #4f6f8f;
+
+  cursor: pointer;
+}
+
+
+.choice-option span {
+  font-size: 15.5px;
 }
 
 
 /* =========================================
-   按鈕
+   Error
+   ========================================= */
+
+.error-message {
+  display: none;
+
+  margin-top: 13px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #b42318;
+}
+
+
+.question-error {
+  background: #fffafa;
+
+  border-color: #e6a2a2;
+}
+
+
+.question-error .error-message {
+  display: block;
+}
+
+
+/* =========================================
+   Button
    ========================================= */
 
 button {
   display: block;
 
-  min-width: 180px;
+  min-width: 190px;
 
-  margin: 36px auto 0 auto;
+  margin:
+    38px auto 0;
 
-  padding: 14px 28px;
+  padding:
+    14px 30px;
 
   font-size: 16px;
+
   font-weight: 600;
 
   color: #ffffff;
@@ -361,21 +673,31 @@ button {
     box-shadow 0.2s ease;
 }
 
-button:hover {
+
+button:hover:not(
+  :disabled
+) {
   background: #3f5d78;
 
-  transform: translateY(-1px);
+  transform:
+    translateY(-1px);
 
   box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.12);
+    0 5px 14px
+    rgba(15, 23, 42, 0.13);
 }
 
-button:active {
-  transform: translateY(0);
+
+button:active:not(
+  :disabled
+) {
+  transform:
+    translateY(0);
 }
+
 
 button:disabled {
-  opacity: 0.6;
+  opacity: 0.62;
 
   cursor: not-allowed;
 
@@ -386,179 +708,29 @@ button:disabled {
 
 
 /* =========================================
-   感謝訊息
+   Thank You
    ========================================= */
 
 #thank-you-message {
-  margin-top: 40px;
-
-  padding: 30px;
-
-  text-align: center;
-
-  background: #f7fafc;
-
-  border: 1px solid #dbe4ec;
-
-  border-radius: 14px;
+  margin-top: 42px;
 }
 
-
-/* =========================================
-   手機版
-   ========================================= */
-
-@media (max-width: 768px) {
-
-  body {
-    padding: 20px 12px;
-  }
-
-  .container {
-    padding: 30px 20px;
-
-    border-radius: 12px;
-  }
-
-  h1 {
-    font-size: 25px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 15px;
-  }
-
-  .scenario-intro {
-    padding: 22px 20px;
-  }
-
-  .question {
-    padding: 18px 16px;
-  }
-
-  .likert-scale {
-    gap: 6px;
-  }
-
-  .likert-scale label {
-    min-width: 38px;
-
-    padding: 6px 4px;
-
-    font-size: 14px;
-  }
-
-  button {
-    width: 100%;
-  }
-
-}
-
-/* =========================================
-   問卷進度
-   ========================================= */
-
-.survey-progress {
-  margin-bottom: 38px;
-  padding-bottom: 24px;
-
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.progress-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 10px;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  color: #64748b;
-}
-
-#page-indicator {
-  color: #4f6f8f;
-}
-
-.progress-track {
-  width: 100%;
-  height: 9px;
-
-  overflow: hidden;
-
-  background: #e9eef3;
-
-  border-radius: 999px;
-}
-
-.progress-bar {
-  height: 100%;
-
-  background: #4f6f8f;
-
-  border-radius: 999px;
-
-  transition: width 0.4s ease;
-}
-
-.progress-percent {
-  margin-top: 7px;
-
-  text-align: right;
-
-  font-size: 13px;
-
-  color: #94a3b8;
-}
-
-/* =========================================
-   問卷結尾說明
-   ========================================= */
-
-.closing-message {
-  margin-top: 28px;
-
-  padding: 22px 26px;
-
-  text-align: center;
-
-  background: #f8fafc;
-
-  border: 1px solid #e2e8f0;
-
-  border-radius: 12px;
-
-  color: #475569;
-}
-
-.closing-message p:last-child {
-  margin-bottom: 0;
-}
-
-
-/* =========================================
-   完成訊息
-   ========================================= */
 
 .completion-card {
   margin-top: 24px;
 
-  padding: 32px 30px;
+  padding: 34px 32px;
 
   text-align: center;
 
   background: #f8fafc;
 
-  border: 1px solid #dbe4ec;
+  border:
+    1px solid #dbe4ec;
 
   border-radius: 14px;
 }
+
 
 .completion-card h2 {
   margin-top: 0;
@@ -566,192 +738,191 @@ button:disabled {
   color: #3f5d78;
 }
 
+
+.completion-card p {
+  max-width: 650px;
+
+  margin-left: auto;
+
+  margin-right: auto;
+}
+
+
 .completion-signature {
   margin-top: 28px;
 
   color: #64748b;
 }
-/* =========================================
-   Likert 兩端標示
-   ========================================= */
 
-.scale-endpoints {
+
+.completion-icon {
   display: flex;
-  justify-content: space-between;
 
-  margin: 6px 3px 8px 3px;
-
-  font-size: 13px;
-  color: #64748b;
-}
-
-
-/* =========================================
-   單選題
-   ========================================= */
-
-.choice-list {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 12px;
-
-  margin-top: 14px;
-}
-
-
-.choice-option {
-  display: flex;
   align-items: center;
 
-  gap: 10px;
+  justify-content: center;
 
-  padding: 14px 16px;
+  width: 58px;
 
-  background: #f8fafc;
+  height: 58px;
 
-  border: 1px solid #e2e8f0;
+  margin:
+    0 auto 18px;
 
-  border-radius: 9px;
+  font-size: 28px;
 
-  cursor: pointer;
+  font-weight: 700;
 
-  transition: 0.2s ease;
-}
+  color: #ffffff;
 
+  background: #4f6f8f;
 
-.choice-option:hover {
-  background: #eef3f8;
-
-  border-color: #9fb0c1;
-}
-
-
-.choice-option:has(
-  input:checked
-) {
-  background: #edf3f8;
-
-  border-color: #4f6f8f;
-
-  box-shadow:
-    0 0 0 1px #4f6f8f;
-}
-
-
-.choice-option input {
-  width: 18px;
-  height: 18px;
-
-  margin: 0;
+  border-radius: 50%;
 }
 
 
 /* =========================================
-   Likert 已選擇
+   System Error
    ========================================= */
 
-.likert-scale label:has(
-  input:checked
-) {
-  background: #edf3f8;
+.system-error {
+  padding: 18px 20px;
 
-  border-color: #4f6f8f;
+  background: #fff4f4;
 
-  box-shadow:
-    0 0 0 1px #4f6f8f;
-}
-
-
-/* =========================================
-   問卷題目說明
-   ========================================= */
-
-.likert-instruction {
-  margin: 36px 0 24px 0;
-
-  padding: 20px 24px;
-
-  background: #f8fafc;
-
-  border: 1px solid #e2e8f0;
+  border:
+    1px solid #e5a3a3;
 
   border-radius: 10px;
-}
 
+  color: #9b1c1c;
 
-.likert-instruction p {
-  margin-bottom: 6px;
-}
-
-
-.likert-instruction p:last-child {
-  margin-bottom: 0;
-}
-
-
-.scale-note {
-  font-size: 14px;
-
-  color: #64748b;
+  text-align: center;
 }
 
 
 /* =========================================
-   未填題目提示
+   Tablet
    ========================================= */
 
-.error-message {
-  display: none;
+@media (
+  max-width: 768px
+) {
 
-  margin-top: 12px;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  color: #b42318;
-}
+  body {
+    padding:
+      20px 12px;
+  }
 
 
-.question-error {
-  border-color: #e5a3a3;
+  .container {
+    padding:
+      30px 20px 40px;
 
-  background: #fffafa;
-}
-
-
-.question-error .error-message {
-  display: block;
-}
+    border-radius: 12px;
+  }
 
 
-/* =========================================
-   手機版
-   ========================================= */
+  h1 {
+    font-size: 25px;
+  }
 
-@media (max-width: 600px) {
 
-  .choice-list {
-    grid-template-columns: 1fr;
+  h2 {
+    font-size: 20px;
+  }
+
+
+  p {
+    font-size: 15px;
+  }
+
+
+  .scenario-intro {
+    padding:
+      22px 20px;
+  }
+
+
+  .question {
+    padding:
+      18px 16px;
   }
 
 
   .likert-scale {
-    gap: 4px;
+    gap: 5px;
   }
 
 
   .likert-scale label {
     min-width: 0;
 
-    padding: 7px 2px;
+    padding:
+      7px 2px;
+
+    font-size: 14px;
   }
 
 
   .scale-endpoints {
     font-size: 12px;
+  }
+
+
+  button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .choice-list {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .likert-scale {
+    gap: 3px;
+  }
+
+
+  .likert-scale label {
+    padding:
+      7px 1px;
+  }
+
+
+  .likert-scale label span {
+    font-size: 13px;
+  }
+
+
+  .likert-scale input[
+    type="radio"
+  ] {
+    width: 16px;
+
+    height: 16px;
+  }
+
+
+  .question-text {
+    font-size: 15px;
+  }
+
+
+  .progress-info {
+    font-size: 13px;
   }
 
 }
