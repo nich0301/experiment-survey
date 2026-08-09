@@ -1,29 +1,33 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hant">
 
 <head>
 
   <meta charset="UTF-8">
 
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>AI 旅遊助理研究問卷</title>
 
-  <!--
-    加版本號避免瀏覽器讀到舊 CSS 快取
-  -->
+  <title>
+    AI 旅遊助理研究問卷
+  </title>
+
+
   <link
     rel="stylesheet"
-    href="style.css?v=20260809-2"
+    href="style.css?v=20260809-3"
   >
 
 </head>
 
 
 <body>
+
 
 <div class="container">
 
@@ -37,15 +41,19 @@
     class="survey-progress"
   >
 
+
     <div class="progress-info">
+
 
       <span id="progress-label">
         問卷進度
       </span>
 
+
       <span id="page-indicator">
         第 1 / 4 頁
       </span>
+
 
     </div>
 
@@ -58,11 +66,13 @@
       aria-valuenow="0"
     >
 
+
       <div
         id="progress-bar"
         class="progress-bar"
         style="width: 0%;"
       ></div>
+
 
     </div>
 
@@ -74,18 +84,20 @@
       0%
     </div>
 
+
   </div>
 
 
 
   <!-- ====================================== -->
-  <!-- Page 1：研究參與說明 -->
+  <!-- Page 1 -->
   <!-- ====================================== -->
 
   <section
     id="page-1"
     class="page"
   >
+
 
     <h1>
       研究參與說明
@@ -149,11 +161,13 @@
 
     <div class="research-info">
 
+
       <p>
         朝陽科技大學休閒事業管理系<br>
         指導教授：許吉越教授<br>
         學生：陳宜芃、林安芸 敬上
       </p>
+
 
     </div>
 
@@ -175,12 +189,13 @@
       我已閱讀並同意參與研究
     </button>
 
+
   </section>
 
 
 
   <!-- ====================================== -->
-  <!-- Page 2：實驗情境＋檢核 -->
+  <!-- Page 2 -->
   <!-- ====================================== -->
 
   <section
@@ -188,12 +203,14 @@
     class="page hidden"
   >
 
+
     <h1>
       情境說明
     </h1>
 
 
     <div class="scenario-intro">
+
 
       <h2>
         請您想像以下情境：
@@ -232,31 +249,24 @@
         回答下方及後續問題。
       </p>
 
+
     </div>
 
 
-    <!-- ================================== -->
-    <!-- JavaScript 依 Condition 放入圖片 -->
-    <!-- ================================== -->
+
+    <!-- JS 依 Condition 放入圖片 -->
 
     <div id="condition-content"></div>
+
 
 
     <hr>
 
 
-    <div class="section-intro">
 
-      <h2>
-        請依據剛才看到的內容回答以下問題
-      </h2>
-
-      <p>
-        請仔細回想剛才呈現的旅遊情境與
-        AI 旅遊助理內容，並依照您的實際感受作答。
-      </p>
-
-    </div>
+    <h2>
+      請依據剛才看到的內容回答以下問題
+    </h2>
 
 
 
@@ -269,6 +279,7 @@
       data-question="AC1"
     >
 
+
       <p class="question-text">
         根據剛才的情境，使用者想規劃的旅遊地點為何？
       </p>
@@ -276,44 +287,66 @@
 
       <div class="choice-list">
 
+
         <label class="choice-option">
+
           <input
             type="radio"
             name="AC1"
             value="1"
           >
-          <span>澎湖</span>
+
+          <span>
+            澎湖
+          </span>
+
         </label>
 
 
         <label class="choice-option">
+
           <input
             type="radio"
             name="AC1"
             value="2"
           >
-          <span>台中</span>
+
+          <span>
+            台中
+          </span>
+
         </label>
 
 
         <label class="choice-option">
+
           <input
             type="radio"
             name="AC1"
             value="3"
           >
-          <span>花蓮</span>
+
+          <span>
+            花蓮
+          </span>
+
         </label>
 
 
         <label class="choice-option">
+
           <input
             type="radio"
             name="AC1"
             value="4"
           >
-          <span>墾丁</span>
+
+          <span>
+            墾丁
+          </span>
+
         </label>
+
 
       </div>
 
@@ -321,6 +354,7 @@
       <div class="error-message">
         此題尚未作答
       </div>
+
 
     </div>
 
@@ -335,6 +369,7 @@
       data-question="AC2"
     >
 
+
       <p class="question-text">
         根據剛才的情境，使用者希望安排的旅遊天數為何？
       </p>
@@ -342,44 +377,66 @@
 
       <div class="choice-list">
 
+
         <label class="choice-option">
+
           <input
             type="radio"
             name="AC2"
             value="1"
           >
-          <span>一天一夜</span>
+
+          <span>
+            一天一夜
+          </span>
+
         </label>
 
 
         <label class="choice-option">
+
           <input
             type="radio"
             name="AC2"
             value="2"
           >
-          <span>兩天一夜</span>
+
+          <span>
+            兩天一夜
+          </span>
+
         </label>
 
 
         <label class="choice-option">
+
           <input
             type="radio"
             name="AC2"
             value="3"
           >
-          <span>三天兩夜</span>
+
+          <span>
+            三天兩夜
+          </span>
+
         </label>
 
 
         <label class="choice-option">
+
           <input
             type="radio"
             name="AC2"
             value="4"
           >
-          <span>五天四夜</span>
+
+          <span>
+            五天四夜
+          </span>
+
         </label>
+
 
       </div>
 
@@ -388,31 +445,33 @@
         此題尚未作答
       </div>
 
+
     </div>
 
 
 
-    <!-- ================================== -->
-    <!-- 操弄檢核 -->
-    <!-- ================================== -->
-
     <div class="likert-instruction">
 
+
       <p>
-        以下題目請依據您對剛才 AI 旅遊助理的
-        實際感受作答。
+        以下題目請依據您對剛才 AI 旅遊助理的實際感受作答。
       </p>
+
 
       <p class="scale-note">
         1 代表「非常不同意」，7 代表「非常同意」。
       </p>
 
+
     </div>
+
 
 
     <div id="TXT_MC_questions"></div>
 
+
     <div id="AVR_MC_questions"></div>
+
 
 
     <button
@@ -422,18 +481,20 @@
       下一頁
     </button>
 
+
   </section>
 
 
 
   <!-- ====================================== -->
-  <!-- Page 3：主要問項（一） -->
+  <!-- Page 3 -->
   <!-- ====================================== -->
 
   <section
     id="page-3"
     class="page hidden"
   >
+
 
     <h1>
       問卷題目
@@ -442,27 +503,24 @@
 
     <div class="page-instruction">
 
+
       <p>
         以下題目請依據您剛才看到的情境，
         選擇最符合您實際感受的答案。
       </p>
 
+
       <p class="scale-note">
         1 代表「非常不同意」，7 代表「非常同意」。
       </p>
 
+
     </div>
 
 
-    <!--
-      能力信任
-      正直信任
-      知覺風險
-      旅遊期待
-      後悔預期
-    -->
 
     <div id="page3-questions"></div>
+
 
 
     <button
@@ -472,18 +530,20 @@
       下一頁
     </button>
 
+
   </section>
 
 
 
   <!-- ====================================== -->
-  <!-- Page 4：主要問項（二）＋基本資料 -->
+  <!-- Page 4 -->
   <!-- ====================================== -->
 
   <section
     id="page-4"
     class="page hidden"
   >
+
 
     <h1>
       問卷題目
@@ -492,28 +552,28 @@
 
     <div class="page-instruction">
 
+
       <p>
         請繼續依據您剛才的情境與實際感受，
         回答以下問題。
       </p>
 
+
       <p class="scale-note">
         1 代表「非常不同意」，7 代表「非常同意」。
       </p>
 
+
     </div>
 
 
-    <!--
-      依賴意圖
-      驗證意圖
-      預訂意圖
-    -->
 
     <div id="page4-questions"></div>
 
 
+
     <hr>
+
 
 
     <h2>
@@ -526,7 +586,9 @@
     </p>
 
 
+
     <div id="demographic-questions"></div>
+
 
 
     <button
@@ -539,7 +601,7 @@
 
 
     <!-- ================================== -->
-    <!-- 成功送出後才出現 -->
+    <!-- 完成訊息 -->
     <!-- ================================== -->
 
     <div
@@ -547,10 +609,12 @@
       class="hidden"
     >
 
+
       <hr>
 
 
       <div class="completion-card">
+
 
         <h2>
           問卷已成功送出
@@ -581,9 +645,12 @@
           學生：陳宜芃、林安芸 敬上
         </p>
 
+
       </div>
 
+
     </div>
+
 
   </section>
 
@@ -591,11 +658,12 @@
 </div>
 
 
-<!--
-  加版本號避免讀到舊 script.js
--->
 
-<script src="script.js?v=20260809-2"></script>
+<!-- ====================================== -->
+<!-- JavaScript -->
+<!-- ====================================== -->
+
+<script src="script.js?v=20260809-3"></script>
 
 
 </body>
