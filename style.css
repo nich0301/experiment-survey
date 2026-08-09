@@ -342,14 +342,17 @@ hr {
 
 .page-instruction,
 .likert-instruction {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 
-  padding: 20px 24px;
+  padding: 21px 24px;
 
   background: #f8fafc;
 
   border:
     1px solid #e2e8f0;
+
+  border-left:
+    4px solid #7c91a6;
 
   border-radius: 10px;
 }
@@ -406,6 +409,73 @@ hr {
   box-shadow:
     0 4px 18px
     rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================
+   構面區塊
+   ========================================= */
+
+.construct-block {
+  margin:
+    0 0 42px;
+
+  overflow: hidden;
+
+  background:
+    #fbfcfd;
+
+  border:
+    1px solid #d8e1e9;
+
+  border-radius:
+    15px;
+
+  box-shadow:
+    0 3px 12px
+    rgba(15, 23, 42, 0.04);
+}
+
+
+.construct-header {
+  padding:
+    18px 24px;
+
+  background:
+    #eaf0f5;
+
+  border-bottom:
+    1px solid #d8e1e9;
+}
+
+
+.construct-title {
+  margin: 0;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color:
+    #36536d;
+}
+
+
+.construct-questions {
+  padding:
+    25px 24px 4px;
+}
+
+
+.construct-questions .question {
+  background:
+    #ffffff;
+}
+
+
+.construct-questions .question:last-child {
+  margin-bottom:
+    20px;
 }
 
 
@@ -1100,6 +1170,24 @@ input[type="email"]:disabled {
   }
 
 
+  .construct-header {
+    padding:
+      16px 18px;
+  }
+
+
+  .construct-title {
+    font-size:
+      18px;
+  }
+
+
+  .construct-questions {
+    padding:
+      18px 14px 1px;
+  }
+
+
   .question {
     padding:
       18px 16px;
@@ -1149,6 +1237,12 @@ input[type="email"]:disabled {
   .choice-list {
     grid-template-columns:
       1fr;
+  }
+
+
+  .construct-block {
+    margin-bottom:
+      32px;
   }
 
 
