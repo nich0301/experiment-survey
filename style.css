@@ -73,12 +73,15 @@ body {
 
   from {
     opacity: 0;
+
     transform:
       translateY(6px);
   }
 
+
   to {
     opacity: 1;
+
     transform:
       translateY(0);
   }
@@ -144,6 +147,15 @@ strong {
   color: #1f2937;
 
   font-weight: 700;
+}
+
+
+ul {
+  margin-top: 10px;
+
+  margin-bottom: 18px;
+
+  padding-left: 24px;
 }
 
 
@@ -260,6 +272,48 @@ hr {
 
 
 /* =========================================
+   首頁抽獎說明
+   ========================================= */
+
+.lottery-notice {
+  margin:
+    28px 0;
+
+  padding:
+    22px 26px;
+
+  background:
+    #fffaf0;
+
+  border:
+    1px solid #ead9ad;
+
+  border-left:
+    4px solid #b58a35;
+
+  border-radius:
+    10px;
+}
+
+
+.lottery-notice h3 {
+  margin-top: 0;
+
+  color: #725b29;
+}
+
+
+.lottery-notice p:last-child {
+  margin-bottom: 0;
+}
+
+
+.lottery-notice li {
+  margin-bottom: 6px;
+}
+
+
+/* =========================================
    情境說明
    ========================================= */
 
@@ -282,18 +336,8 @@ hr {
 }
 
 
-.section-intro {
-  margin-bottom: 24px;
-}
-
-
-.section-intro h2 {
-  margin-top: 0;
-}
-
-
 /* =========================================
-   Page instruction
+   Page Instructions
    ========================================= */
 
 .page-instruction,
@@ -366,7 +410,7 @@ hr {
 
 
 /* =========================================
-   Question Card
+   Question
    ========================================= */
 
 .question {
@@ -428,7 +472,7 @@ hr {
 
 
 /* =========================================
-   Likert Scale
+   Likert
    ========================================= */
 
 .likert-scale {
@@ -639,7 +683,7 @@ hr {
 
 
 /* =========================================
-   Button
+   Buttons
    ========================================= */
 
 button {
@@ -688,14 +732,6 @@ button:hover:not(
 }
 
 
-button:active:not(
-  :disabled
-) {
-  transform:
-    translateY(0);
-}
-
-
 button:disabled {
   opacity: 0.62;
 
@@ -707,18 +743,29 @@ button:disabled {
 }
 
 
+.secondary-button {
+  background: #586f83;
+}
+
+
+.secondary-button:hover:not(
+  :disabled
+) {
+  background: #43596c;
+}
+
+
 /* =========================================
-   Thank You
+   Completion
    ========================================= */
 
-#thank-you-message {
-  margin-top: 42px;
+#completion-view {
+  animation:
+    fadeIn 0.35s ease;
 }
 
 
 .completion-card {
-  margin-top: 24px;
-
   padding: 34px 32px;
 
   text-align: center;
@@ -782,6 +829,214 @@ button:disabled {
 
 
 /* =========================================
+   Lottery Section
+   ========================================= */
+
+.lottery-section {
+  margin-top: 34px;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border:
+    1px solid #d8e0e8;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 14px
+    rgba(15, 23, 42, 0.05);
+}
+
+
+.lottery-section h2 {
+  margin-top: 0;
+
+  text-align: center;
+
+  color: #354e66;
+}
+
+
+.lottery-prizes {
+  margin:
+    22px 0;
+
+  padding:
+    18px 22px;
+
+  background:
+    #fffaf0;
+
+  border:
+    1px solid #ead9ad;
+
+  border-radius:
+    10px;
+}
+
+
+.lottery-prizes p {
+  margin-bottom: 8px;
+}
+
+
+.lottery-prizes ul {
+  margin-bottom: 0;
+}
+
+
+.lottery-privacy-note {
+  margin:
+    22px 0;
+
+  padding:
+    18px 20px;
+
+  background:
+    #f8fafc;
+
+  border-left:
+    4px solid #8095aa;
+
+  border-radius:
+    8px;
+
+  color:
+    #526273;
+}
+
+
+.lottery-privacy-note p {
+  font-size: 14px;
+
+  margin-bottom: 8px;
+}
+
+
+.lottery-privacy-note p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   Email
+   ========================================= */
+
+.email-field {
+  margin-top: 26px;
+}
+
+
+.email-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  color: #334155;
+}
+
+
+.optional-text {
+  margin-left: 4px;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  color: #64748b;
+}
+
+
+input[type="email"] {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  font-size: 16px;
+
+  font-family: inherit;
+
+  color: #2d3748;
+
+  background: #ffffff;
+
+  border:
+    1px solid #cbd5e1;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+input[type="email"]:focus {
+  border-color: #647f9b;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(100, 127, 155, 0.13);
+}
+
+
+input[type="email"]:disabled {
+  background: #f1f5f9;
+
+  color: #64748b;
+}
+
+
+.email-error {
+  margin-top: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #b42318;
+}
+
+
+/* =========================================
+   Lottery Success
+   ========================================= */
+
+.lottery-success {
+  margin-top: 24px;
+
+  padding: 20px 22px;
+
+  text-align: center;
+
+  background: #f0f7f3;
+
+  border:
+    1px solid #bdd8c8;
+
+  border-radius: 10px;
+
+  color: #365a46;
+}
+
+
+.lottery-success p {
+  margin:
+    8px 0 0;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
    System Error
    ========================================= */
 
@@ -808,6 +1063,7 @@ button:disabled {
 @media (
   max-width: 768px
 ) {
+
 
   body {
     padding:
@@ -860,8 +1116,6 @@ button:disabled {
 
     padding:
       7px 2px;
-
-    font-size: 14px;
   }
 
 
@@ -874,6 +1128,12 @@ button:disabled {
     width: 100%;
   }
 
+
+  .lottery-section {
+    padding:
+      24px 20px;
+  }
+
 }
 
 
@@ -884,6 +1144,7 @@ button:disabled {
 @media (
   max-width: 600px
 ) {
+
 
   .choice-list {
     grid-template-columns:
@@ -923,6 +1184,14 @@ button:disabled {
 
   .progress-info {
     font-size: 13px;
+  }
+
+
+  .lottery-notice,
+  .lottery-prizes,
+  .lottery-privacy-note {
+    padding:
+      16px 18px;
   }
 
 }
