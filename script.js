@@ -49,33 +49,100 @@ const scenarios = {
 
   1: `
     <div class="scenario-box">
-      <img src="images/c1_01.png" class="stimulus-image" alt="實驗情境畫面 1">
-      <img src="images/c1_02.png" class="stimulus-image" alt="實驗情境畫面 2">
-      <img src="images/c1_03.png" class="stimulus-image" alt="實驗情境畫面 3">
+
+      <img
+        src="images/c1_01.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 1"
+      >
+
+      <img
+        src="images/c1_02.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 2"
+      >
+
+      <img
+        src="images/c1_03.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 3"
+      >
+
     </div>
   `,
+
 
   2: `
     <div class="scenario-box">
-      <img src="images/c2_01.png" class="stimulus-image" alt="實驗情境畫面 1">
-      <img src="images/c2_02.png" class="stimulus-image" alt="實驗情境畫面 2">
-      <img src="images/c2_03.png" class="stimulus-image" alt="實驗情境畫面 3">
+
+      <img
+        src="images/c2_01.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 1"
+      >
+
+      <img
+        src="images/c2_02.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 2"
+      >
+
+      <img
+        src="images/c2_03.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 3"
+      >
+
     </div>
   `,
+
 
   3: `
     <div class="scenario-box">
-      <img src="images/c3_01.png" class="stimulus-image" alt="實驗情境畫面 1">
-      <img src="images/c3_02.png" class="stimulus-image" alt="實驗情境畫面 2">
-      <img src="images/c3_03.png" class="stimulus-image" alt="實驗情境畫面 3">
+
+      <img
+        src="images/c3_01.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 1"
+      >
+
+      <img
+        src="images/c3_02.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 2"
+      >
+
+      <img
+        src="images/c3_03.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 3"
+      >
+
     </div>
   `,
 
+
   4: `
     <div class="scenario-box">
-      <img src="images/c4_01.png" class="stimulus-image" alt="實驗情境畫面 1">
-      <img src="images/c4_02.png" class="stimulus-image" alt="實驗情境畫面 2">
-      <img src="images/c4_03.png" class="stimulus-image" alt="實驗情境畫面 3">
+
+      <img
+        src="images/c4_01.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 1"
+      >
+
+      <img
+        src="images/c4_02.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 2"
+      >
+
+      <img
+        src="images/c4_03.png"
+        class="stimulus-image"
+        alt="實驗情境畫面 3"
+      >
+
     </div>
   `
 
@@ -142,99 +209,168 @@ const questionnaire = {
   page3: [
 
 
+    // ======================================
     // 能力信任
+    // ======================================
 
-    [
-      "CT1",
-      "我認為AI旅遊助理值得信賴。"
-    ],
+    {
 
-    [
-      "CT2",
-      "我認為AI旅遊助理能準確地履行其規劃建議與承諾。"
-    ],
+      construct:
+        "能力信任",
 
-    [
-      "CT3",
-      "我認為AI旅遊助理將使用者的利益視為首要考量。"
-    ],
+      questions: [
 
+        [
+          "CT1",
+          "我認為AI旅遊助理值得信賴。"
+        ],
 
-    // 正直信任
+        [
+          "CT2",
+          "我認為AI旅遊助理能準確地履行其規劃建議與承諾。"
+        ],
 
-    [
-      "IT1",
-      "我認為 AI 旅遊助理提供的旅遊資訊是真實的。"
-    ],
+        [
+          "CT3",
+          "我認為AI旅遊助理將使用者的利益視為首要考量。"
+        ]
 
-    [
-      "IT2",
-      "我認為 AI 旅遊助理在提供旅遊資訊時是誠實的。"
-    ],
+      ]
 
-    [
-      "IT3",
-      "我認為 AI 旅遊助理會信守其所做出的承諾。"
-    ],
+    },
 
 
+
+    // ======================================
     // 知覺風險
+    // ======================================
 
-    [
-      "PR1",
-      "我認為向 AI 旅遊助理提供個人資訊具有一定的風險。"
-    ],
+    {
 
-    [
-      "PR2",
-      "我認為向 AI 旅遊助理提供個人資訊存在許多不確定性。"
-    ],
+      construct:
+        "知覺風險",
 
-    [
-      "PR3",
-      "我認為向 AI 旅遊助理提供個人資訊可能帶來潛在的損失。"
-    ],
+      questions: [
 
+        [
+          "PR1",
+          "我認為向 AI 旅遊助理提供個人資訊具有一定的風險。"
+        ],
 
-    // 旅遊期待
+        [
+          "PR2",
+          "我認為向 AI 旅遊助理提供個人資訊存在許多不確定性。"
+        ],
 
-    [
-      "EXP1",
-      "我認為使用AI旅遊助理規劃行程，會讓我對這趟旅程感到快樂。"
-    ],
+        [
+          "PR3",
+          "我認為向 AI 旅遊助理提供個人資訊可能帶來潛在的損失。"
+        ]
 
-    [
-      "EXP2",
-      "我認為使用AI旅遊助理規劃行程，會讓我對這趟旅程感到愉悅。"
-    ],
+      ]
 
-    [
-      "EXP3",
-      "我認為使用AI旅遊助理規劃行程，會讓我對這趟旅程感到滿足。"
-    ],
+    },
 
 
+
+    // ======================================
+    // 正直信任
+    // ======================================
+
+    {
+
+      construct:
+        "正直信任",
+
+      questions: [
+
+        [
+          "IT1",
+          "我認為 AI 旅遊助理提供的旅遊資訊是真實的。"
+        ],
+
+        [
+          "IT2",
+          "我認為 AI 旅遊助理在提供旅遊資訊時是誠實的。"
+        ],
+
+        [
+          "IT3",
+          "我認為 AI 旅遊助理會信守其所做出的承諾。"
+        ]
+
+      ]
+
+    },
+
+
+
+    // ======================================
     // 後悔預期
+    // ======================================
 
-    [
-      "REG1",
-      "我擔心若採納 AI 旅遊助理提供的旅遊建議，之後可能出現更好的旅遊方案，而讓我感到後悔。"
-    ],
+    {
 
-    [
-      "REG2",
-      "我擔心若採納 AI 旅遊助理提供的旅遊建議，實際的旅遊體驗可能不如預期，而讓我感到後悔。"
-    ],
+      construct:
+        "後悔預期",
 
-    [
-      "REG3",
-      "我擔心若未採納 AI 旅遊助理提供的旅遊建議，之後可能需要付出較高的旅遊成本，而讓我感到後悔。"
-    ],
+      questions: [
 
-    [
-      "REG4",
-      "我擔心若未採納 AI 旅遊助理提供的旅遊建議，事後發現其建議其實是較好的選擇，而讓我感到後悔。"
-    ]
+        [
+          "REG1",
+          "我擔心若採納 AI 旅遊助理提供的旅遊建議，之後可能發現有更好的旅遊方案，而讓我感到後悔。"
+        ],
+
+        [
+          "REG2",
+          "我擔心若採納 AI 旅遊助理提供的旅遊建議，實際的旅遊體驗可能不如預期，而讓我感到後悔。"
+        ],
+
+        [
+          "REG3",
+          "我擔心若採納 AI 旅遊助理提供的旅遊建議，之後可能發現該建議並不符合我的旅遊需求，而讓我感到後悔。"
+        ],
+
+        [
+          "REG4",
+          "我擔心若採納 AI 旅遊助理提供的旅遊建議，事後可能認為自己做了錯誤的旅遊選擇，而讓我感到後悔。"
+        ]
+
+      ]
+
+    },
+
+
+
+    // ======================================
+    // 旅遊期待
+    // ======================================
+
+    {
+
+      construct:
+        "旅遊期待",
+
+      questions: [
+
+        [
+          "EXP1",
+          "我認為使用AI旅遊助理規劃行程，會讓我對這趟旅程感到快樂。"
+        ],
+
+        [
+          "EXP2",
+          "我認為使用AI旅遊助理規劃行程，會讓我對這趟旅程感到愉悅。"
+        ],
+
+        [
+          "EXP3",
+          "我認為使用AI旅遊助理規劃行程，會讓我對這趟旅程感到滿足。"
+        ]
+
+      ]
+
+    }
 
   ],
 
@@ -247,78 +383,119 @@ const questionnaire = {
   page4: [
 
 
-    // 依賴意圖
-
-    [
-      "REL1",
-      "我對於AI旅遊助理所提供的旅遊建議感到放心。"
-    ],
-
-    [
-      "REL2",
-      "我會毫不猶豫地參考AI旅遊助理所提供的旅遊建議。"
-    ],
-
-    [
-      "REL3",
-      "我對於AI旅遊助理所提供的旅遊建議感到安心。"
-    ],
-
-    [
-      "REL4",
-      "我對於AI旅遊助理所提供的旅遊建議感到信賴，並會據以依賴與參考。"
-    ],
-
-
+    // ======================================
     // 驗證意圖
+    // ======================================
 
-    [
-      "VER1",
-      "面對AI旅遊助理所提供的行程建議時，我會主動搜尋行程內容的原始資料出處。"
-    ],
+    {
 
-    [
-      "VER2",
-      "面對AI旅遊助理所提供的行程建議時，我會檢查行程中的相關資訊是否有更新。"
-    ],
+      construct:
+        "驗證意圖",
 
-    [
-      "VER3",
-      "面對AI旅遊助理所提供的行程建議時，我會查核該行程背後之資訊來源或官方網站的可靠度。"
-    ],
+      questions: [
+
+        [
+          "VER1",
+          "面對AI旅遊助理所提供的行程建議時，我會主動搜尋行程內容的原始資料出處。"
+        ],
+
+        [
+          "VER2",
+          "面對AI旅遊助理所提供的行程建議時，我會檢查行程中的相關資訊是否有更新。"
+        ],
+
+        [
+          "VER3",
+          "面對AI旅遊助理所提供的行程建議時，我會查核該行程背後之資訊來源或官方網站的可靠度。"
+        ]
+
+      ]
+
+    },
 
 
+
+    // ======================================
+    // 依賴意圖
+    // ======================================
+
+    {
+
+      construct:
+        "依賴意圖",
+
+      questions: [
+
+        [
+          "REL1",
+          "我對於AI旅遊助理所提供的旅遊建議感到放心。"
+        ],
+
+        [
+          "REL2",
+          "我會毫不猶豫地參考AI旅遊助理所提供的旅遊建議。"
+        ],
+
+        [
+          "REL3",
+          "我對於AI旅遊助理所提供的旅遊建議感到安心。"
+        ],
+
+        [
+          "REL4",
+          "我對於AI旅遊助理所提供的旅遊建議感到信賴，並會據以依賴與參考。"
+        ]
+
+      ]
+
+    },
+
+
+
+    // ======================================
     // 預訂意圖
+    // ======================================
 
-    [
-      "BOOK1",
-      "我認為使用 AI 旅遊助理協助規劃旅遊，是我規劃旅程的重要方式之一。"
-    ],
+    {
 
-    [
-      "BOOK2",
-      "未來規劃旅遊時，我打算更加依賴 AI 旅遊助理協助我進行旅遊規劃與預訂。"
-    ],
+      construct:
+        "預訂意圖",
 
-    [
-      "BOOK3",
-      "規劃旅遊時，我打算使用 AI 旅遊助理，協助我做出更完善且便利的旅遊預訂決策。"
-    ],
+      questions: [
 
-    [
-      "BOOK4",
-      "我認同 AI 旅遊助理所提供的優點，並願意將其運用於旅遊規劃與預訂。"
-    ],
+        [
+          "BOOK1",
+          "我認為使用 AI 旅遊助理協助規劃旅遊，是我規劃旅程的重要方式之一。"
+        ],
 
-    [
-      "BOOK5",
-      "選擇旅遊產品或服務時，我打算有效運用 AI 旅遊助理協助我進行旅遊預訂。"
-    ],
+        [
+          "BOOK2",
+          "未來規劃旅遊時，我打算更加依賴 AI 旅遊助理協助我進行旅遊規劃與預訂。"
+        ],
 
-    [
-      "BOOK6",
-      "若需要預訂旅遊產品或服務，我會優先考慮使用 AI 旅遊助理協助我完成旅遊預訂。"
-    ]
+        [
+          "BOOK3",
+          "規劃旅遊時，我打算使用 AI 旅遊助理，協助我做出更完善且便利的旅遊預訂決策。"
+        ],
+
+        [
+          "BOOK4",
+          "我認同 AI 旅遊助理所提供的優點，並願意將其運用於旅遊規劃與預訂。"
+        ],
+
+        [
+          "BOOK5",
+          "選擇旅遊產品或服務時，我打算有效運用 AI 旅遊助理協助我進行旅遊預訂。"
+        ],
+
+        [
+          "BOOK6",
+          "若需要預訂旅遊產品或服務，我會優先考慮使用 AI 旅遊助理協助我完成旅遊預訂。"
+        ]
+
+      ]
+
+    }
 
   ]
 
@@ -400,6 +577,50 @@ function createLikertQuestion(
 
 
 // ==========================================
+// Construct Block
+// ==========================================
+
+function createConstructBlock(
+  constructName,
+  questions
+) {
+
+  return `
+
+    <section class="construct-block">
+
+      <div class="construct-header">
+
+        <h2 class="construct-title">
+          ${constructName}
+        </h2>
+
+      </div>
+
+
+      <div class="construct-questions">
+
+        ${questions
+          .map(
+            q =>
+              createLikertQuestion(
+                q[0],
+                q[1]
+              )
+          )
+          .join("")}
+
+      </div>
+
+    </section>
+
+  `;
+
+}
+
+
+
+// ==========================================
 // Choice Question
 // ==========================================
 
@@ -467,6 +688,10 @@ function createChoiceQuestion(
 function renderQuestions() {
 
 
+  // ========================================
+  // Manipulation Text
+  // ========================================
+
   const txtContainer =
     document.getElementById(
       "TXT_MC_questions"
@@ -490,6 +715,10 @@ function renderQuestions() {
   }
 
 
+
+  // ========================================
+  // Manipulation Avatar
+  // ========================================
 
   const avatarContainer =
     document.getElementById(
@@ -515,6 +744,10 @@ function renderQuestions() {
 
 
 
+  // ========================================
+  // Page 3：Construct Blocks
+  // ========================================
+
   const page3Container =
     document.getElementById(
       "page3-questions"
@@ -527,10 +760,10 @@ function renderQuestions() {
       questionnaire
         .page3
         .map(
-          q =>
-            createLikertQuestion(
-              q[0],
-              q[1]
+          group =>
+            createConstructBlock(
+              group.construct,
+              group.questions
             )
         )
         .join("");
@@ -538,6 +771,10 @@ function renderQuestions() {
   }
 
 
+
+  // ========================================
+  // Page 4：Construct Blocks
+  // ========================================
 
   const page4Container =
     document.getElementById(
@@ -551,10 +788,10 @@ function renderQuestions() {
       questionnaire
         .page4
         .map(
-          q =>
-            createLikertQuestion(
-              q[0],
-              q[1]
+          group =>
+            createConstructBlock(
+              group.construct,
+              group.questions
             )
         )
         .join("");
@@ -1159,25 +1396,27 @@ function showCompletionView() {
     );
 
 
-  if (
-    lotteryRegistered
-  ) {
+  if (lotteryRegistered) {
 
 
     if (formWrap) {
 
-      formWrap.classList.add(
-        "hidden"
-      );
+      formWrap
+        .classList
+        .add(
+          "hidden"
+        );
 
     }
 
 
     if (successMessage) {
 
-      successMessage.classList.remove(
-        "hidden"
-      );
+      successMessage
+        .classList
+        .remove(
+          "hidden"
+        );
 
     }
 
@@ -1187,18 +1426,22 @@ function showCompletionView() {
 
     if (formWrap) {
 
-      formWrap.classList.remove(
-        "hidden"
-      );
+      formWrap
+        .classList
+        .remove(
+          "hidden"
+        );
 
     }
 
 
     if (successMessage) {
 
-      successMessage.classList.add(
-        "hidden"
-      );
+      successMessage
+        .classList
+        .add(
+          "hidden"
+        );
 
     }
 
@@ -1282,9 +1525,11 @@ function setupLotterySubmission() {
             "若要參加抽獎，請輸入電子郵件地址。";
 
 
-          errorMessage.classList.remove(
-            "hidden"
-          );
+          errorMessage
+            .classList
+            .remove(
+              "hidden"
+            );
 
         }
 
@@ -1323,9 +1568,11 @@ function setupLotterySubmission() {
             "請輸入有效的電子郵件格式。";
 
 
-          errorMessage.classList.remove(
-            "hidden"
-          );
+          errorMessage
+            .classList
+            .remove(
+              "hidden"
+            );
 
         }
 
@@ -1344,9 +1591,11 @@ function setupLotterySubmission() {
 
       if (errorMessage) {
 
-        errorMessage.classList.add(
-          "hidden"
-        );
+        errorMessage
+          .classList
+          .add(
+            "hidden"
+          );
 
       }
 
@@ -1420,18 +1669,22 @@ function setupLotterySubmission() {
 
         if (formWrap) {
 
-          formWrap.classList.add(
-            "hidden"
-          );
+          formWrap
+            .classList
+            .add(
+              "hidden"
+            );
 
         }
 
 
         if (successMessage) {
 
-          successMessage.classList.remove(
-            "hidden"
-          );
+          successMessage
+            .classList
+            .remove(
+              "hidden"
+            );
 
         }
 
@@ -1462,8 +1715,6 @@ function setupLotterySubmission() {
   );
 
 
-  // 輸入時移除錯誤
-
   const emailInput =
     document.getElementById(
       "lottery-email"
@@ -1484,9 +1735,11 @@ function setupLotterySubmission() {
 
         if (errorMessage) {
 
-          errorMessage.classList.add(
-            "hidden"
-          );
+          errorMessage
+            .classList
+            .add(
+              "hidden"
+            );
 
         }
 
@@ -1592,7 +1845,7 @@ document.addEventListener(
 
 
           // ==================================
-          // 已經分派過
+          // 已分派過
           // ==================================
 
           if (
@@ -1701,10 +1954,6 @@ document.addEventListener(
             }
 
 
-
-            // ==================================
-            // LocalStorage
-            // ==================================
 
             localStorage.setItem(
 
@@ -1854,9 +2103,13 @@ document.addEventListener(
           const ids =
             questionnaire
               .page3
-              .map(
-                q =>
-                  q[0]
+              .flatMap(
+                group =>
+                  group.questions
+                    .map(
+                      q =>
+                        q[0]
+                    )
               );
 
 
@@ -1902,14 +2155,28 @@ document.addEventListener(
             this;
 
 
+
+          // ==================================
+          // Page 4 IDs
+          // ==================================
+
           const page4Ids =
             questionnaire
               .page4
-              .map(
-                q =>
-                  q[0]
+              .flatMap(
+                group =>
+                  group.questions
+                    .map(
+                      q =>
+                        q[0]
+                    )
               );
 
+
+
+          // ==================================
+          // Demographics
+          // ==================================
 
           const demographicIds = [
 
@@ -2149,13 +2416,20 @@ document.addEventListener(
           questionnaire
             .page3
             .forEach(
-              q => {
+              group => {
 
-                data[
-                  q[0]
-                ] =
-                  getRadioValue(
-                    q[0]
+                group.questions
+                  .forEach(
+                    q => {
+
+                      data[
+                        q[0]
+                      ] =
+                        getRadioValue(
+                          q[0]
+                        );
+
+                    }
                   );
 
               }
@@ -2170,13 +2444,20 @@ document.addEventListener(
           questionnaire
             .page4
             .forEach(
-              q => {
+              group => {
 
-                data[
-                  q[0]
-                ] =
-                  getRadioValue(
-                    q[0]
+                group.questions
+                  .forEach(
+                    q => {
+
+                      data[
+                        q[0]
+                      ] =
+                        getRadioValue(
+                          q[0]
+                        );
+
+                    }
                   );
 
               }
@@ -2245,19 +2526,11 @@ document.addEventListener(
             );
 
 
-            // ==================================
-            // Browser 完成標記
-            // ==================================
-
             localStorage.setItem(
               "survey_completed",
               "true"
             );
 
-
-            // ==================================
-            // 顯示完成頁＋抽獎
-            // ==================================
 
             showCompletionView();
 
@@ -2292,7 +2565,7 @@ document.addEventListener(
 
 
     // ======================================
-    // 回答後取消紅色警示
+    // 回答後移除錯誤提示
     // ======================================
 
     document.addEventListener(
