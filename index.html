@@ -20,7 +20,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=20260809-3"
+    href="style.css?v=20260809-4"
   >
 
 </head>
@@ -44,16 +44,13 @@
 
     <div class="progress-info">
 
-
       <span id="progress-label">
         問卷進度
       </span>
 
-
       <span id="page-indicator">
         第 1 / 4 頁
       </span>
-
 
     </div>
 
@@ -66,13 +63,11 @@
       aria-valuenow="0"
     >
 
-
       <div
         id="progress-bar"
         class="progress-bar"
         style="width: 0%;"
       ></div>
-
 
     </div>
 
@@ -83,7 +78,6 @@
     >
       0%
     </div>
-
 
   </div>
 
@@ -134,10 +128,19 @@
 
 
     <p>
-      本問卷採匿名方式進行，
-      所有資料僅供學術研究與統計分析使用，
+      本問卷作答資料採匿名方式蒐集，
+      所有研究資料僅供學術研究與統計分析使用，
       不作任何商業用途，
-      亦不會揭露可識別您身分的個人資料。
+      問卷作答資料亦不蒐集可直接識別您身分的姓名或電子郵件地址。
+    </p>
+
+
+    <p>
+      若您於完成問卷後自願參加抽獎，
+      所提供的電子郵件地址將另行蒐集，
+      僅供抽獎聯絡與電子禮券寄送使用，
+      不與您的問卷作答資料建立直接連結，
+      亦不納入研究分析。
     </p>
 
 
@@ -145,6 +148,51 @@
       您可以自由決定是否參與本研究，
       亦可於填答過程中隨時停止作答。
     </p>
+
+
+
+    <!-- ================================== -->
+    <!-- 抽獎說明 -->
+    <!-- ================================== -->
+
+    <div class="lottery-notice">
+
+
+      <h3>
+        完成問卷抽獎
+      </h3>
+
+
+      <p>
+        為感謝您的參與，
+        完成本問卷後可自願登記參加電子禮券抽獎。
+        本次抽獎獎項如下：
+      </p>
+
+
+      <ul>
+
+        <li>
+          7-ELEVEN 50 元電子禮券，共 20 名
+        </li>
+
+        <li>
+          星巴克 100 元電子禮券，共 4 名
+        </li>
+
+      </ul>
+
+
+      <p>
+        若您希望參加抽獎，
+        可於完成問卷後自願留下電子郵件地址，
+        作為得獎通知及電子禮券寄送之用。
+        是否參加抽獎不影響您的研究參與權益。
+      </p>
+
+
+    </div>
+
 
 
     <p>
@@ -161,13 +209,11 @@
 
     <div class="research-info">
 
-
       <p>
         朝陽科技大學休閒事業管理系<br>
         指導教授：許吉越教授<br>
         學生：陳宜芃、林安芸 敬上
       </p>
-
 
     </div>
 
@@ -259,9 +305,7 @@
     <div id="condition-content"></div>
 
 
-
     <hr>
-
 
 
     <h2>
@@ -278,7 +322,6 @@
       class="question"
       data-question="AC1"
     >
-
 
       <p class="question-text">
         根據剛才的情境，使用者想規劃的旅遊地點為何？
@@ -369,7 +412,6 @@
       data-question="AC2"
     >
 
-
       <p class="question-text">
         根據剛才的情境，使用者希望安排的旅遊天數為何？
       </p>
@@ -452,26 +494,20 @@
 
     <div class="likert-instruction">
 
-
       <p>
         以下題目請依據您對剛才 AI 旅遊助理的實際感受作答。
       </p>
-
 
       <p class="scale-note">
         1 代表「非常不同意」，7 代表「非常同意」。
       </p>
 
-
     </div>
-
 
 
     <div id="TXT_MC_questions"></div>
 
-
     <div id="AVR_MC_questions"></div>
-
 
 
     <button
@@ -518,9 +554,7 @@
     </div>
 
 
-
     <div id="page3-questions"></div>
-
 
 
     <button
@@ -567,13 +601,10 @@
     </div>
 
 
-
     <div id="page4-questions"></div>
 
 
-
     <hr>
-
 
 
     <h2>
@@ -586,9 +617,7 @@
     </p>
 
 
-
     <div id="demographic-questions"></div>
-
 
 
     <button
@@ -599,52 +628,195 @@
     </button>
 
 
+  </section>
+
+
+
+  <!-- ====================================== -->
+  <!-- 問卷完成頁 -->
+  <!-- ====================================== -->
+
+  <section
+    id="completion-view"
+    class="hidden"
+  >
+
+
+    <div class="completion-card">
+
+
+      <div class="completion-icon">
+        ✓
+      </div>
+
+
+      <h2>
+        問卷已成功送出
+      </h2>
+
+
+      <p>
+        非常感謝您撥冗參與本研究並完成本次問卷。
+        您所提供的寶貴意見將作為本研究的重要分析資料，
+        並僅供學術研究使用。
+      </p>
+
+
+      <p>
+        再次感謝您的支持與協助！
+      </p>
+
+
+      <p>
+        敬祝<br>
+        平安順心　身體健康
+      </p>
+
+
+      <p class="completion-signature">
+        朝陽科技大學休閒事業管理系<br>
+        指導教授：許吉越教授<br>
+        學生：陳宜芃、林安芸 敬上
+      </p>
+
+
+    </div>
+
+
 
     <!-- ================================== -->
-    <!-- 完成訊息 -->
+    <!-- 獨立抽獎區 -->
     <!-- ================================== -->
 
     <div
-      id="thank-you-message"
-      class="hidden"
+      id="lottery-section"
+      class="lottery-section"
     >
 
 
-      <hr>
+      <h2>
+        電子禮券抽獎登記
+      </h2>
 
 
-      <div class="completion-card">
+      <p>
+        若您希望參加本次電子禮券抽獎，
+        請於下方留下您的電子郵件地址。
+      </p>
 
 
-        <h2>
-          問卷已成功送出
-        </h2>
-
-
-        <p>
-          非常感謝您撥冗參與本研究並完成本次問卷。
-          您所提供的寶貴意見將作為本研究的重要分析資料，
-          並僅供學術研究使用。
-        </p>
-
+      <div class="lottery-prizes">
 
         <p>
-          再次感謝您的支持與協助！
+          <strong>
+            抽獎獎項
+          </strong>
         </p>
 
+
+        <ul>
+
+          <li>
+            7-ELEVEN 50 元電子禮券 × 20 名
+          </li>
+
+          <li>
+            星巴克 100 元電子禮券 × 4 名
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="lottery-privacy-note">
 
         <p>
-          敬祝<br>
-          平安順心　身體健康
+          電子郵件僅用於抽獎聯絡及電子禮券寄送，
+          不會納入研究分析，
+          亦不與您的問卷作答資料建立直接連結。
         </p>
 
-
-        <p class="completion-signature">
-          朝陽科技大學休閒事業管理系<br>
-          指導教授：許吉越教授<br>
-          學生：陳宜芃、林安芸 敬上
+        <p>
+          此欄位為自願填寫。
+          若您不希望參加抽獎，可直接略過並關閉本頁。
         </p>
 
+      </div>
+
+
+
+      <!-- ================================== -->
+      <!-- 尚未登記 -->
+      <!-- ================================== -->
+
+      <div id="lottery-form-wrap">
+
+
+        <div class="email-field">
+
+
+          <label for="lottery-email">
+
+            電子郵件地址
+
+            <span class="optional-text">
+              （選填）
+            </span>
+
+          </label>
+
+
+          <input
+            type="email"
+            id="lottery-email"
+            placeholder="例如：example@email.com"
+            autocomplete="email"
+          >
+
+
+          <div
+            id="lottery-email-error"
+            class="email-error hidden"
+          >
+            請輸入有效的電子郵件格式。
+          </div>
+
+
+        </div>
+
+
+        <button
+          type="button"
+          id="lottery-submit-btn"
+          class="secondary-button"
+        >
+          登記參加抽獎
+        </button>
+
+
+      </div>
+
+
+
+      <!-- ================================== -->
+      <!-- 已完成抽獎登記 -->
+      <!-- ================================== -->
+
+      <div
+        id="lottery-success"
+        class="lottery-success hidden"
+        aria-live="polite"
+      >
+
+        <strong>
+          抽獎登記已完成
+        </strong>
+
+        <p>
+          感謝您的參與！
+          若您中獎，將透過所提供的電子郵件地址進行聯絡。
+        </p>
 
       </div>
 
@@ -663,7 +835,7 @@
 <!-- JavaScript -->
 <!-- ====================================== -->
 
-<script src="script.js?v=20260809-3"></script>
+<script src="script.js?v=20260809-4"></script>
 
 
 </body>
