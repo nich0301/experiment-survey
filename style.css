@@ -571,3 +571,187 @@ button:disabled {
 
   color: #64748b;
 }
+/* =========================================
+   Likert 兩端標示
+   ========================================= */
+
+.scale-endpoints {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 6px 3px 8px 3px;
+
+  font-size: 13px;
+  color: #64748b;
+}
+
+
+/* =========================================
+   單選題
+   ========================================= */
+
+.choice-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 14px;
+}
+
+
+.choice-option {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px 16px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.choice-option:hover {
+  background: #eef3f8;
+
+  border-color: #9fb0c1;
+}
+
+
+.choice-option:has(
+  input:checked
+) {
+  background: #edf3f8;
+
+  border-color: #4f6f8f;
+
+  box-shadow:
+    0 0 0 1px #4f6f8f;
+}
+
+
+.choice-option input {
+  width: 18px;
+  height: 18px;
+
+  margin: 0;
+}
+
+
+/* =========================================
+   Likert 已選擇
+   ========================================= */
+
+.likert-scale label:has(
+  input:checked
+) {
+  background: #edf3f8;
+
+  border-color: #4f6f8f;
+
+  box-shadow:
+    0 0 0 1px #4f6f8f;
+}
+
+
+/* =========================================
+   問卷題目說明
+   ========================================= */
+
+.likert-instruction {
+  margin: 36px 0 24px 0;
+
+  padding: 20px 24px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+}
+
+
+.likert-instruction p {
+  margin-bottom: 6px;
+}
+
+
+.likert-instruction p:last-child {
+  margin-bottom: 0;
+}
+
+
+.scale-note {
+  font-size: 14px;
+
+  color: #64748b;
+}
+
+
+/* =========================================
+   未填題目提示
+   ========================================= */
+
+.error-message {
+  display: none;
+
+  margin-top: 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #b42318;
+}
+
+
+.question-error {
+  border-color: #e5a3a3;
+
+  background: #fffafa;
+}
+
+
+.question-error .error-message {
+  display: block;
+}
+
+
+/* =========================================
+   手機版
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .choice-list {
+    grid-template-columns: 1fr;
+  }
+
+
+  .likert-scale {
+    gap: 4px;
+  }
+
+
+  .likert-scale label {
+    min-width: 0;
+
+    padding: 7px 2px;
+  }
+
+
+  .scale-endpoints {
+    font-size: 12px;
+  }
+
+}
