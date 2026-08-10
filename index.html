@@ -634,190 +634,200 @@
   <!-- 問卷完成頁 -->
   <!-- ====================================== -->
 
-  <section
-    id="completion-view"
-    class="hidden"
+<!-- ====================================== -->
+<!-- 問卷完成頁 -->
+<!-- ====================================== -->
+
+<section
+  id="completion-view"
+  class="hidden"
+>
+
+
+  <!-- ================================== -->
+  <!-- 獨立抽獎區 -->
+  <!-- 放在完成訊息上方 -->
+  <!-- ================================== -->
+
+  <div
+    id="lottery-section"
+    class="lottery-section"
   >
 
 
-    <div class="completion-card">
+    <h2>
+      電子禮券抽獎登記
+    </h2>
 
 
-      <div class="completion-icon">
-        ✓
-      </div>
+    <p>
+      若您希望參加本次電子禮券抽獎，
+      請於下方留下您的電子郵件地址。
+    </p>
 
 
-      <h2>
-        問卷已成功送出
-      </h2>
-
+    <div class="lottery-prizes">
 
       <p>
-        非常感謝您撥冗參與本研究並完成本次問卷。
-        您所提供的寶貴意見將作為本研究的重要分析資料，
-        並僅供學術研究使用。
+        <strong>
+          抽獎獎項
+        </strong>
       </p>
 
 
+      <ul>
+
+        <li>
+          7-ELEVEN 50 元電子禮券 × 20 名
+        </li>
+
+        <li>
+          星巴克 100 元電子禮券 × 4 名
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="lottery-privacy-note">
+
       <p>
-        再次感謝您的支持與協助！
+        電子郵件僅用於抽獎聯絡及電子禮券寄送，
+        不會納入研究分析，
+        亦不與您的問卷作答資料建立直接連結。
       </p>
 
-
       <p>
-        敬祝<br>
-        平安順心　身體健康
-      </p>
-
-
-      <p class="completion-signature">
-        朝陽科技大學休閒事業管理系<br>
-        指導教授：許吉越教授、王明月教授<br>
-        學生：陳宜芃、林安芸 敬上
+        此欄位為自願填寫。
+        若您不希望參加抽獎，可直接略過並關閉本頁。
       </p>
 
     </div>
 
 
 
-    <!-- ================================== -->
-    <!-- 獨立抽獎區 -->
-    <!-- ================================== -->
+    <!-- 尚未登記 -->
 
-    <div
-      id="lottery-section"
-      class="lottery-section"
-    >
+    <div id="lottery-form-wrap">
 
 
-      <h2>
-        電子禮券抽獎登記
-      </h2>
+      <div class="email-field">
 
 
-      <p>
-        若您希望參加本次電子禮券抽獎，
-        請於下方留下您的電子郵件地址。
-      </p>
+        <label for="lottery-email">
+
+          電子郵件地址
+
+          <span class="optional-text">
+            （選填）
+          </span>
+
+        </label>
 
 
-      <div class="lottery-prizes">
-
-        <p>
-          <strong>
-            抽獎獎項
-          </strong>
-        </p>
-
-
-        <ul>
-
-          <li>
-            7-ELEVEN 50 元電子禮券 × 20 名
-          </li>
-
-          <li>
-            星巴克 100 元電子禮券 × 4 名
-          </li>
-
-        </ul>
-
-      </div>
+        <input
+          type="email"
+          id="lottery-email"
+          placeholder="例如：example@email.com"
+          autocomplete="email"
+        >
 
 
-      <div class="lottery-privacy-note">
-
-        <p>
-          電子郵件僅用於抽獎聯絡及電子禮券寄送，
-          不會納入研究分析，
-          亦不與您的問卷作答資料建立直接連結。
-        </p>
-
-        <p>
-          此欄位為自願填寫。
-          若您不希望參加抽獎，可直接略過並關閉本頁。
-        </p>
-
-      </div>
-
-
-
-      <!-- 尚未登記 -->
-
-      <div id="lottery-form-wrap">
-
-
-        <div class="email-field">
-
-
-          <label for="lottery-email">
-
-            電子郵件地址
-
-            <span class="optional-text">
-              （選填）
-            </span>
-
-          </label>
-
-
-          <input
-            type="email"
-            id="lottery-email"
-            placeholder="例如：example@email.com"
-            autocomplete="email"
-          >
-
-
-          <div
-            id="lottery-email-error"
-            class="email-error hidden"
-          >
-            請輸入有效的電子郵件格式。
-          </div>
-
-
+        <div
+          id="lottery-email-error"
+          class="email-error hidden"
+        >
+          請輸入有效的電子郵件格式。
         </div>
 
 
-        <button
-          type="button"
-          id="lottery-submit-btn"
-          class="secondary-button"
-        >
-          登記參加抽獎
-        </button>
-
-
       </div>
 
 
-
-      <!-- 已登記 -->
-
-      <div
-        id="lottery-success"
-        class="lottery-success hidden"
-        aria-live="polite"
+      <button
+        type="button"
+        id="lottery-submit-btn"
+        class="secondary-button"
       >
-
-        <strong>
-          抽獎登記已完成
-        </strong>
-
-        <p>
-          感謝您的參與！
-          若您中獎，將透過所提供的電子郵件地址進行聯絡。
-        </p>
-
-      </div>
+        登記參加抽獎
+      </button>
 
 
     </div>
 
 
-  </section>
+
+    <!-- 已登記 -->
+
+    <div
+      id="lottery-success"
+      class="lottery-success hidden"
+      aria-live="polite"
+    >
+
+      <strong>
+        抽獎登記已完成
+      </strong>
+
+      <p>
+        感謝您的參與！
+        若您中獎，將透過所提供的電子郵件地址進行聯絡。
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- ================================== -->
+  <!-- 問卷完成訊息 -->
+  <!-- ================================== -->
+
+  <div class="completion-card">
+
+
+    <div class="completion-icon">
+      ✓
+    </div>
+
+
+    <h2>
+      問卷已成功送出
+    </h2>
+
+
+    <p>
+      非常感謝您撥冗參與本研究並完成本次問卷。
+      您所提供的寶貴意見將作為本研究的重要分析資料，
+      並僅供學術研究使用。
+    </p>
+
+
+    <p>
+      再次感謝您的支持與協助！
+    </p>
+
+
+    <p>
+      敬祝<br>
+      平安順心　身體健康
+    </p>
+
+
+    <p class="completion-signature">
+      朝陽科技大學休閒事業管理系<br>
+      指導教授：許吉越教授<br>
+      學生：陳宜芃、林安芸 敬上
+    </p>
+
+
+  </div>
+
+
+</section>
 
 
 </div>
